@@ -1,0 +1,29 @@
+openapi: 3.0.1
+info:
+  title: Code Context
+  description: A plugin that automatically feeds GPT4 the contents of your codebase and uses it as context.
+  version: 'v1'
+servers:
+  - url: http://codecontext.hansahub.com
+paths:
+  /codebase:
+    get:
+      operationId: getCodeBase
+      summary: Gets the codebase
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getCodeBaseResponse'
+components:
+  schemas:
+    getCodeBaseResponse:
+      type: object
+      properties:
+        todos:
+          type: array
+          items:
+            type: string
+          description: The CodeBase.

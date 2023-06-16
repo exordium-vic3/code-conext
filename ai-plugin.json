@@ -5,7 +5,7 @@
     "description_for_human": "This plugin automatically feeds GPT-4 the contents of your codebase and uses it as context.",
     "description_for_model": "You will be given a codebase. You will have to use the codebase as context for the user who is programming something and needs your assistance.",
     "auth": {
-        "type": "auth0"
+        "type": "oauth"
     },
     "api": {
         "type": "openapi",
